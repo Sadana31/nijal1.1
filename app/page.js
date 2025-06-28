@@ -37,12 +37,15 @@ export default function HomePage() {
     }));
   };
 
-  const filteredData = data.filter((row) => {
-    if (!searchField || !searchValue) return true;
-    const val = row[searchField];
-    if (!val) return false;
-    return val.toString().toLowerCase().includes(searchValue.toLowerCase());
-  });
+const filteredData = Array.isArray(data)
+  ? data.filter((row) => {
+      if (!searchField || !searchValue) return true;
+      const val = row[searchField];
+      if (!val) return false;
+      return val.toString().toLowerCase().includes(searchValue.toLowerCase());
+    })
+  : [];
+
 
   useEffect(() => {
     searchData(); // load all by default
