@@ -136,10 +136,13 @@ export default function HomePage() {
         {/* Search + Buttons Row */}
        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
   {/* Search Section */}
-  <div className="flex flex-wrap items-center gap-2">
+  <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
+  {/* Left side: Search Section */}
+  <div className="flex items-center gap-2 flex-wrap">
     <label htmlFor="sb-search-field" className="text-[#254852] font-medium">
       Search by:
     </label>
+
     <select
       id="sb-search-field"
       className="border border-gray-300 rounded-lg px-2 py-1 text-black"
@@ -164,28 +167,36 @@ export default function HomePage() {
 
     <button
       onClick={searchData}
-      className="bg-[#5495ab] text-white px-4 py-2 rounded-xl hover:bg-[#457d92] transition"
+      className="bg-[#5495ab] text-white px-3 py-1.5 rounded-lg hover:bg-[#457d92] transition text-sm me-5"
     >
       Search
     </button>
   </div>
 
-  {/* Button Group */}
-  <div className="flex flex-wrap items-center gap-3">
+  <br/>
+
+  {/* Right side: Button group */}
+  <div className="flex items-center gap-2">
     <button
-      className="bg-[#5495ab] text-white px-5 py-2 rounded-xl shadow hover:bg-[#457d92] transition"
+      className="bg-[#5495ab] text-white px-3 py-1.5 rounded-lg shadow hover:bg-[#457d92] transition text-sm ms-5 "
       onClick={() => router.push('/add_sb')}
     >
       Add Shipping Bill
     </button>
+
     <button
-      className="bg-[#5495ab] text-white px-5 py-2 rounded-xl shadow hover:bg-[#457d92] transition"
+      className="bg-[#5495ab] text-white px-3 py-1.5 rounded-lg shadow hover:bg-[#457d92] transition text-sm"
       onClick={() => router.push('/bulk_sb')}
     >
-      Bulk Shipping Bill Upload
+      Bulk Upload
     </button>
-    <ExportCSVButton data={filteredData} />
+
+    <ExportCSVButton
+      data={filteredData}
+      className="bg-[#5495ab] text-white px-3 py-1.5 rounded-lg shadow hover:bg-[#457d92] transition text-sm"
+    />
   </div>
+</div>
 </div>
 
 {/* Entries per page */}
