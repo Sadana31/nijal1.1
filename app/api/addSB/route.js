@@ -19,7 +19,7 @@ export async function POST(req) {
     }
 
     const db = await dbConnect();
-    const collection = db.collection('shippingBills');
+    const collection = db.collection('shipping_bill');
 
     await collection.insertOne({
       ...data,

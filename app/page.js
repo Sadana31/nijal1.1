@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Gauge } from 'lucide-react';
 import Link from 'next/link';
-import ExportCSVButton from '@/components/ExportCSVButton';
+import ExportCSVButton from '@/components/SBExportCSV';
 import { useRouter } from 'next/navigation';
 import Sidebar from '@/components/Sidebar';
 

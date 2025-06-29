@@ -10,7 +10,7 @@ export default function Sidebar() {
         <Home size={36} />
         <span className="mt-2 text-center">Shipping Bills</span>
       </Link>
-      <Link href="/" className="flex flex-col items-center hover:text-white-300">
+      <Link href="/irm" className="flex flex-col items-center hover:text-white-300">
         <Gauge size={36} />
         <span className="mt-2 text-center">IRM Details</span>
       </Link>
